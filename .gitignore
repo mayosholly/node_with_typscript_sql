@@ -1,0 +1,58 @@
+# Node.js
+node_modules/
+uploads/
+
+# Dependency directories
+jspm_packages/
+bower_components/
+
+# Visual Studio Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# Environment files
+.env
+
+# Config files
+config.json
+.config.json
+
+# Compiled output
+dist/
+build/
+
+# Runtime data
+pids/
+*.pid
+*.pid.lock
+
+# IDE files
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Compiled Python files
+*.pyc
+
+# Compiled TypeScript files
+*.tsbuildinfo
+
+# Docker
+DockerDesktop/
+.dockerignore
+.docker/
+
+# Yarn
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/versions
+.pnp.*
