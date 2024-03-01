@@ -18,6 +18,7 @@ class User extends Model<UserAttributes, UserCreationAttributes> implements User
 
   static associate(models: { [key: string]: typeof Model }): void {
     // Define associations here if needed
+    User.hasMany(models.Post as any, { foreignKey: 'userId', as: 'userPosts' });
   }
 }
 

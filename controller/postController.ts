@@ -5,7 +5,20 @@ import Validator from "fastest-validator"
 
 export const index = async (req:Request, res:Response) => {
     try {
-        const posts = await models.Post.findAll()
+        const posts = await models.Post.findAll({
+            include: [
+                {
+                    model: models.User,
+                    as: 'author', // Make sure you use the alias defined in your association
+                    attributes: ['id', 'name', 'email'], // Specify the attributes you want to include
+                },
+                {
+                    model: models.Category,
+                    as: 'postCategory', // Make sure you use the alias defined in your association
+                    attributes: ['id', 'name'], // Specify the attributes you want to include
+                },
+            ],
+        })
         res.status(200).json(posts)
     } catch (error) {
         res.status(500).json({ error: error })
@@ -13,8 +26,8 @@ export const index = async (req:Request, res:Response) => {
 }
 
 export const save = async (req:Request, res:Response) => {
-    const {title, content, imageUrl, categoryId, userId} = <CreatePost> req.body;
-
+    const {title, content, imageUrl, categoryId} = <CreatePost> req.body;
+    const userId = req.userData.userId;
     
     const schema = {
         title: { type: "string", optional: false, max: 100 },
@@ -35,6 +48,13 @@ export const save = async (req:Request, res:Response) => {
 
 
     try {
+        const categoryExists = await models.Category.findByPk(categoryId);
+        if (!categoryExists) {
+            return res.status(400).json({
+                message: 'Category does not exist',
+            });
+        }
+
         const result = await models.Post.create({
             title,
             content,
@@ -53,7 +73,20 @@ export const save = async (req:Request, res:Response) => {
 export const show = async (req: Request, res: Response) => {
     const id =  req.params.id;
     try {
-        const post = await models.Post.findByPk(id);
+        const post = await models.Post.findByPk(id, {
+            include: [
+                {
+                    model: models.User,
+                    as: 'author', // Make sure you use the alias defined in your association
+                    attributes: ['id', 'name', 'email'], // Specify the attributes you want to include
+                },
+                {
+                    model: models.Category,
+                    as: 'postCategory', // Make sure you use the alias defined in your association
+                    attributes: ['id', 'name'], // Specify the attributes you want to include
+                },
+            ],
+        });
         if(post) {
             res.status(200).json({
                 message: "Success",
@@ -72,7 +105,8 @@ export const show = async (req: Request, res: Response) => {
 }
   
 export const update = async(req:Request, res:Response) => {
-    const {title, content, imageUrl, categoryId, userId} = <CreatePost> req.body;
+    const {title, content, imageUrl, categoryId} = <CreatePost> req.body;
+    const userId = req.userData.userId;
     const id : any = req.params.id;
     try {
         const post = await models.Post.update({

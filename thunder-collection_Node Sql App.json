@@ -1,0 +1,295 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Node Sql App",
+    "dateExported": "2024-03-01T11:30:36.356Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "3633c38c-eab4-4746-85fa-43ef3e69df18",
+            "name": "posts",
+            "containerId": "",
+            "created": "2024-02-28T13:47:35.582Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "ca1d576f-b488-4f6d-ae50-3f7d78cb5355",
+            "name": "categories",
+            "containerId": "",
+            "created": "2024-02-28T13:50:22.533Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "607f0a77-ce6d-4e1c-bc88-e190ef8e41a3",
+            "name": "upload",
+            "containerId": "",
+            "created": "2024-02-29T11:47:06.913Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "d1cc8630-6ea8-4dd1-86cd-561acd04a515",
+            "name": "Authentication",
+            "containerId": "",
+            "created": "2024-02-29T12:59:39.687Z",
+            "sortNum": 40000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "ce756af5-d6e2-4c04-bac8-ff9bfb5b9c0b",
+            "colId": "65244f07-186d-477e-8ba5-72912a314b6d",
+            "containerId": "3633c38c-eab4-4746-85fa-43ef3e69df18",
+            "name": "get all posts",
+            "url": "localhost:3000/posts",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-02-28T13:47:58.295Z",
+            "modified": "2024-03-01T08:50:24.915Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6Im1heW93YSIsImVtYWlsIjoibWF5b0BtYXlvLmNvbSIsImlhdCI6MTcwOTI4MzAxMCwiZXhwIjoxNzA5Mjg2NjEwfQ.y4-2szbZIB2qQ75uSoybOkhsWrjMLi3y_236hsXXz2c"
+            },
+            "tests": []
+        },
+        {
+            "_id": "30dbc288-70f0-466a-9099-a5a7bd14aa70",
+            "colId": "65244f07-186d-477e-8ba5-72912a314b6d",
+            "containerId": "3633c38c-eab4-4746-85fa-43ef3e69df18",
+            "name": "get a post",
+            "url": "localhost:3000/posts/2",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-28T13:48:18.466Z",
+            "modified": "2024-02-28T13:48:31.449Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "fe5eb12a-6ba7-4784-af54-b2017e7c048f",
+            "colId": "65244f07-186d-477e-8ba5-72912a314b6d",
+            "containerId": "3633c38c-eab4-4746-85fa-43ef3e69df18",
+            "name": "create a post",
+            "url": "localhost:3000/posts",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-02-28T13:48:46.800Z",
+            "modified": "2024-03-01T11:04:59.201Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\":\"david\",\n  \"content\": \"new davud\",\n  \"imageUrl\" : \"dsd\",\n  \"categoryId\" : 1\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJtYXlvd2EiLCJlbWFpbCI6Im1heW9AbWF5by5jb20iLCJpYXQiOjE3MDkyOTA5NTksImV4cCI6MTcwOTI5NDU1OX0.mVhb90auayja6qacQdMX7brvV-2QmwtZg6-dIseIShk"
+            },
+            "tests": []
+        },
+        {
+            "_id": "588dae92-68d7-4d03-b556-08f10d44a278",
+            "colId": "65244f07-186d-477e-8ba5-72912a314b6d",
+            "containerId": "3633c38c-eab4-4746-85fa-43ef3e69df18",
+            "name": "update a post",
+            "url": "localhost:3000/posts/2",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-02-28T13:49:33.662Z",
+            "modified": "2024-03-01T11:05:30.878Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\":\"nesda\",\n  \"content\": \"new davud\",\n  \"imageUrl\" : \"dsd\",\n  \"categoryId\" : 1\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJtYXlvd2EiLCJlbWFpbCI6Im1heW9AbWF5by5jb20iLCJpYXQiOjE3MDkyOTA5NTksImV4cCI6MTcwOTI5NDU1OX0.mVhb90auayja6qacQdMX7brvV-2QmwtZg6-dIseIShk"
+            },
+            "tests": []
+        },
+        {
+            "_id": "44249f85-2deb-4c27-8d81-218501e53e0b",
+            "colId": "65244f07-186d-477e-8ba5-72912a314b6d",
+            "containerId": "3633c38c-eab4-4746-85fa-43ef3e69df18",
+            "name": "delete a post",
+            "url": "localhost:3000/posts/2",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-02-28T13:50:01.330Z",
+            "modified": "2024-02-28T13:50:08.190Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "ba8dfa05-3a2c-4eb1-819a-ffc3dfe8cead",
+            "colId": "65244f07-186d-477e-8ba5-72912a314b6d",
+            "containerId": "ca1d576f-b488-4f6d-ae50-3f7d78cb5355",
+            "name": "get all categories",
+            "url": "localhost:3000/categories",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-02-28T13:50:31.478Z",
+            "modified": "2024-02-28T13:50:40.956Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "3429d6a4-b877-4691-bf2c-100c03940063",
+            "colId": "65244f07-186d-477e-8ba5-72912a314b6d",
+            "containerId": "ca1d576f-b488-4f6d-ae50-3f7d78cb5355",
+            "name": "post category",
+            "url": "localhost:3000/categories",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2024-02-29T09:59:10.855Z",
+            "modified": "2024-03-01T11:03:33.351Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n \"name\" :\"mayowa\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJtYXlvd2EiLCJlbWFpbCI6Im1heW9AbWF5by5jb20iLCJpYXQiOjE3MDkyOTA5NTksImV4cCI6MTcwOTI5NDU1OX0.mVhb90auayja6qacQdMX7brvV-2QmwtZg6-dIseIShk"
+            },
+            "tests": []
+        },
+        {
+            "_id": "e0542922-756a-4678-a7ca-e2f6dd0bb197",
+            "colId": "65244f07-186d-477e-8ba5-72912a314b6d",
+            "containerId": "ca1d576f-b488-4f6d-ae50-3f7d78cb5355",
+            "name": "update category",
+            "url": "localhost:3000/categories/1",
+            "method": "PUT",
+            "sortNum": 75000,
+            "created": "2024-02-29T10:48:40.257Z",
+            "modified": "2024-02-29T11:02:16.478Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n \"name\" :\"david\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "18547099-3980-4305-bd11-16ffedcec317",
+            "colId": "65244f07-186d-477e-8ba5-72912a314b6d",
+            "containerId": "ca1d576f-b488-4f6d-ae50-3f7d78cb5355",
+            "name": "get a category",
+            "url": "localhost:3000/categories/1",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2024-02-29T10:19:44.689Z",
+            "modified": "2024-02-29T10:19:51.289Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "d39457ff-8099-4995-86b7-c9f9ae7404a1",
+            "colId": "65244f07-186d-477e-8ba5-72912a314b6d",
+            "containerId": "ca1d576f-b488-4f6d-ae50-3f7d78cb5355",
+            "name": "delete category",
+            "url": "localhost:3000/categories/2",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2024-02-29T11:06:16.361Z",
+            "modified": "2024-02-29T11:09:33.573Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f42a35c2-4824-48a2-9717-09fa254165d1",
+            "colId": "65244f07-186d-477e-8ba5-72912a314b6d",
+            "containerId": "607f0a77-ce6d-4e1c-bc88-e190ef8e41a3",
+            "name": "image upload",
+            "url": "localhost:3000/upload",
+            "method": "POST",
+            "sortNum": 100000,
+            "created": "2024-02-29T11:47:16.276Z",
+            "modified": "2024-03-01T09:16:31.942Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [],
+                "files": [
+                    {
+                        "name": "image",
+                        "value": "c:\\Users\\David\\Pictures\\Saved Pictures\\anime1.jpg"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6Im1heW93YSIsImVtYWlsIjoibWF5b0BtYXlvLmNvbSIsImlhdCI6MTcwOTI4NDU0MSwiZXhwIjoxNzA5Mjg4MTQxfQ.BGLZ5B2nQENpOYsOALvlSzDnwyesT_gNboJnidHbAkI"
+            },
+            "tests": []
+        },
+        {
+            "_id": "5fe9f553-6bfd-45f5-b3d1-a680b16e10d7",
+            "colId": "65244f07-186d-477e-8ba5-72912a314b6d",
+            "containerId": "d1cc8630-6ea8-4dd1-86cd-561acd04a515",
+            "name": "create user",
+            "url": "localhost:3000/auth/create",
+            "method": "POST",
+            "sortNum": 110000,
+            "created": "2024-02-29T13:00:42.349Z",
+            "modified": "2024-02-29T13:03:56.490Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\" :\"mayowa\",\n  \"email\": \"mayo@mayo.com\",\n  \"password\": \"mayowa\",\n  \"confirmPassword\" : \"mayowa\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "99660240-2759-4914-94f8-3c08b19f91cb",
+            "colId": "65244f07-186d-477e-8ba5-72912a314b6d",
+            "containerId": "d1cc8630-6ea8-4dd1-86cd-561acd04a515",
+            "name": "login as a user ",
+            "url": "localhost:3000/auth/login",
+            "method": "POST",
+            "sortNum": 120000,
+            "created": "2024-02-29T13:28:08.414Z",
+            "modified": "2024-02-29T13:29:55.464Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\" :\"mayowa\",\n  \"email\": \"mayo@mayo.com\",\n  \"password\": \"mayowa\",\n  \"confirmPassword\" : \"mayowa\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "8f8bcf83-cb08-4ef1-a895-c3d298eab458",
+            "colId": "65244f07-186d-477e-8ba5-72912a314b6d",
+            "containerId": "d1cc8630-6ea8-4dd1-86cd-561acd04a515",
+            "name": "get all users",
+            "url": "localhost:3000/auth/allUsers",
+            "method": "GET",
+            "sortNum": 130000,
+            "created": "2024-03-01T11:23:12.259Z",
+            "modified": "2024-03-01T11:23:52.161Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

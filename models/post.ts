@@ -21,6 +21,11 @@ class Post extends Model<PostAttributes, PostCreationAttributes> implements Post
 
   static associate(models: { [key: string]: typeof Model }): void {
     // Define associations here if needed
+      // Create a many-to-one association between Post and User
+      Post.belongsTo(models.User as any, { foreignKey: 'userId', as: 'author' });
+
+      // Create a many-to-one association between Post and Category
+      Post.belongsTo(models.Category as any, { foreignKey: 'categoryId', as: 'postCategory' });
   }
 }
 

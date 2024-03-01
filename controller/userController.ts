@@ -78,7 +78,7 @@ export const login = async (req: Request, res: Response) => {
             if (result) {
                 const token = jwt.sign(
                     {
-                        id: user.id,
+                        userId: user.id,
                         name: user.name,
                         email: user.email,
                     },
@@ -104,3 +104,21 @@ export const login = async (req: Request, res: Response) => {
         });
     }
 };
+
+export const allUsers = async (req: Request, res: Response) => {
+    try {
+        const users = await models.User.findAll({
+            attributes: ['id', 'name', 'email'], // Specify the attributes for the User model
+            include: [
+                {
+                    model: models.Post,
+                    as: 'userPosts', // Make sure you use the alias defined in your association
+                    attributes: ['id', 'title'], // Specify the attributes you want to include
+                },   
+            ]
+        });
+        res.status(200).json(users);
+    } catch (error) {
+        res.status(500).json({ error: error });
+    }
+} 
